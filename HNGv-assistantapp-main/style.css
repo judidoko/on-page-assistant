@@ -1,0 +1,96 @@
+/* Default styles for larger screens */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #01377d;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar {
+  background: rgb(64, 93, 241);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100px;
+  height: 150px;
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  border: none;
+  animation: grow;
+  animation-duration: 2s;
+  animation-iteration-count: 2;
+}
+
+.sidebar img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  margin-top: 50px;
+}
+
+.sidebar p {
+  background: #a67e05;
+  padding: 10px;
+  border-radius: 10px;
+  text-transform: capitalize;
+  text-align: center;
+  position: absolute;
+  top: -20px;
+  left: 0;
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  80% {
+    transform: scale(1.3);
+  }
+}
+
+button {
+  padding: 10px;
+}
+
+.navigations {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100px;
+    height: 100px;
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .sidebar p {
+    font-size: 12px;
+  }
+
+  .navigations {
+    padding: 10px;
+  }
+}
